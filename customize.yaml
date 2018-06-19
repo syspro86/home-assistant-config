@@ -1,0 +1,5 @@
+fan.xiaomi_miio_device: {}
+group.all_automations:
+  hidden: false
+group.all_scripts:
+  hidden: false

@@ -1,0 +1,28 @@
+- id: podcast_updated
+  alias: podcast_updated
+  trigger:
+  - entity_id: sensor.podcast_list_0
+    platform: state
+  - entity_id: sensor.podcast_list_1
+    platform: state
+  - entity_id: sensor.podcast_list_2
+    platform: state
+  - entity_id: sensor.podcast_list_3
+    platform: state
+  - entity_id: sensor.podcast_list_4
+    platform: state
+  - entity_id: sensor.podcast_list_5
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      message: 'unread list!'
+      data:
+        keyboard:
+          - '{{ states.sensor.podcast_list_0.state }}'
+          - '{{ states.sensor.podcast_list_1.state }}'
+          - '{{ states.sensor.podcast_list_2.state }}'
+          - '{{ states.sensor.podcast_list_3.state }}'
+          - '{{ states.sensor.podcast_list_4.state }}'
+          - '{{ states.sensor.podcast_list_5.state }}'
+    service: notify.telegram_noti

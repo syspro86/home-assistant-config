@@ -1,0 +1,29 @@
+'wake_up_pc':
+  alias: WakeUpMyPC
+  sequence:
+  - data:
+      mac: !secret pc_mac
+    service: wake_on_lan.send_magic_packet
+'restart':
+  alias: restart
+  sequence:
+  - service: homeassistant.restart
+'mini_play_url':
+  alias: mini mp3 재생
+  sequence:
+  - service: media_player.play_media
+    data_template:
+      entity_id: "media_player.mymini"
+      media_content_id: "{{ param }}"
+      media_content_type: "audio/mp3"
+  # remove from unread list
+  - service: notify.podcast_remove_url
+    data_template:
+      message: "{{ param }}"
+'mini_set_volume':
+  alias: mini set volume
+  sequence:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: "media_player.mymini"
+      volume_level: "{{ param|int(0) / 100 }}"

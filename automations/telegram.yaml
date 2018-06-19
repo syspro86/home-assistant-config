@@ -1,0 +1,25 @@
+# 커맨드명의 스크립트를 호출
+- id: telegram_bot_podcast
+  alias: telegram_bot_podcast
+  trigger:
+    platform: event
+    event_type: telegram_command
+  action:
+  - service_template: script.{{ trigger.event.data.command|replace("/","",1) }}
+
+# 볼륨조절 (0~100) / mp3 호출
+- id: telegram_ontext
+  alias: telegram_ontext
+  trigger:
+    platform: event
+    event_type: telegram_text
+  action:
+  - service_template: >
+      {% if trigger.event.data.text|int(-1) >= 0 and trigger.event.data.text|int(-1) <= 100 %}
+      script.mini_set_volume
+      {% else %}
+      script.mini_play_url
+      {% endif %}
+    data_template:
+      param: "{{ trigger.event.data.text }}"
+

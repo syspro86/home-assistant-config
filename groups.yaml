@@ -1,0 +1,59 @@
+default_view:
+  name: Home
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.system
+    - group.xiaomi
+    - group.weather
+    - group.weather_yahoo
+    - media_player.mymini
+
+automations:
+  name: 자동화
+  view: yes
+  entities:
+    - group.all_automations
+    
+scripts:
+  name: 스크립트
+  view: yes
+  entities:
+    - group.all_scripts
+        
+xiaomi:
+  name: 샤오미
+  entities:
+    - fan.xiaomi_miio_device
+#    - vacuum.xiaomi_vacuum_cleaner
+system:
+  name: 시스템
+  entities:
+    - sensor.cpu_speed
+    - sensor.processor_use
+    - sensor.memory_free
+    - sensor.disk_use_percent_home
+    - sensor.disk_use_percent_config
+    - sensor.network_in_enp3s0
+    - sensor.network_out_enp3s0
+    - sensor.ssl_certificate_expiry
+weather:
+  name: 날씨
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+weather_yahoo:
+  name: 날씨
+  entities:
+    - sensor.yw_day0_condition
+    - sensor.yw_day0_temperature_min
+    - sensor.yw_day0_temperature_max
+    - sensor.yw_day1_condition
+    - sensor.yw_day1_temperature_min
+    - sensor.yw_day1_temperature_max
+    - sensor.yw_day2_condition
+    - sensor.yw_day2_temperature_min
+    - sensor.yw_day2_temperature_max
+    - sensor.yw_day3_condition
+    - sensor.yw_day3_temperature_min
+    - sensor.yw_day3_temperature_max
