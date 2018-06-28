@@ -50,14 +50,14 @@ weather_yahoo:
   name: 날씨
   entities:
     - sensor.yw_day0_condition
-    - sensor.yw_day0_temperature_min
-    - sensor.yw_day0_temperature_max
+    # - sensor.yw_day0_temperature_min
+    # - sensor.yw_day0_temperature_max
     - sensor.yw_day1_condition
-    - sensor.yw_day1_temperature_min
-    - sensor.yw_day1_temperature_max
-    - sensor.yw_day2_condition
-    - sensor.yw_day2_temperature_min
-    - sensor.yw_day2_temperature_max
-    - sensor.yw_day3_condition
-    - sensor.yw_day3_temperature_min
-    - sensor.yw_day3_temperature_max
+    # - sensor.yw_day1_temperature_min
+    # - sensor.yw_day1_temperature_max
+    # - sensor.yw_day2_condition
+    # - sensor.yw_day2_temperature_min
+    # - sensor.yw_day2_temperature_max
+    # - sensor.yw_day3_condition
+    # - sensor.yw_day3_temperature_min
+    # - sensor.yw_day3_temperature_max
