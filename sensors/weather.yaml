@@ -27,4 +27,25 @@
     - weather
     - temp_min
     - temp_max
+- platform: template
+  sensors:
+    room_temperature:
+      friendly_name: '방 온도'
+      unit_of_measurement: '°C'
+      value_template: '{{ states.fan.xiaomi_miio_device.attributes.temperature }}'
+    room_humidity:
+      friendly_name: '방 습도'
+      unit_of_measurement: '%'
+      value_template: '{{ states.fan.xiaomi_miio_device.attributes.humidity }}'
+    room_aqi:
+      friendly_name: '방 미세먼지 농도'
+      unit_of_measurement: '㎍/㎥'
+      value_template: '{{ states.fan.xiaomi_miio_device.attributes.aqi }}'
+    xiaomi_filter_life_remaining:
+      friendly_name: '공기청정기 필터 잔량'
+      unit_of_measurement: '%'
+      value_template: '{{ states.fan.xiaomi_miio_device.attributes.filter_life_remaining }}'
 
+      
+
+      

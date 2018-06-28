@@ -25,6 +25,10 @@ xiaomi:
   name: 샤오미
   entities:
     - fan.xiaomi_miio_device
+    - sensor.room_temperature
+    - sensor.room_humidity
+    - sensor.room_aqi
+    - sensor.xiaomi_filter_life_remaining
 #    - vacuum.xiaomi_vacuum_cleaner
 system:
   name: 시스템
