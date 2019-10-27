@@ -5,9 +5,18 @@ default_view:
   entities:
     - group.system
     - group.xiaomi
-    - group.weather
-    - group.weather_yahoo
+#    - group.weather
+#    - group.weather_yahoo
     - media_player.mymini
+    - group.docker
+
+#docker:
+#  name: Docker
+#  entities:
+#    - sensor.mythic_mem
+#    - sensor.jenkins_mem
+#    - sensor.mongo_mem
+#    - sensor.jupyter_mem
 
 automations:
   name: 자동화
@@ -36,23 +45,23 @@ system:
     - sensor.cpu_speed
     - sensor.processor_use
     - sensor.memory_free
-    - sensor.disk_use_percent_home
-    - sensor.disk_use_percent_config
-    - sensor.network_in_enp3s0
-    - sensor.network_out_enp3s0
+#    - sensor.disk_use_percent_home
+#    - sensor.disk_use_percent_config
+#    - sensor.network_in_enp3s0
+#    - sensor.network_out_enp3s0
     - sensor.ssl_certificate_expiry
-weather:
-  name: 날씨
-  entities:
-    - sun.sun
-    - sensor.yr_symbol
-weather_yahoo:
-  name: 날씨
-  entities:
-    - sensor.yw_day0_condition
+#weather:
+#  name: 날씨
+#  entities:
+#    - sun.sun
+#    - sensor.yr_symbol
+#weather_yahoo:
+#  name: 날씨
+#  entities:
+#    - sensor.yw_day0_condition
     # - sensor.yw_day0_temperature_min
     # - sensor.yw_day0_temperature_max
-    - sensor.yw_day1_condition
+#    - sensor.yw_day1_condition
     # - sensor.yw_day1_temperature_min
     # - sensor.yw_day1_temperature_max
     # - sensor.yw_day2_condition

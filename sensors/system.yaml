@@ -1,15 +1,15 @@
 - platform: cpuspeed
 - platform: systemmonitor
   resources:
-    - type: disk_use_percent
-      arg: /home
-    - type: disk_use_percent
-      arg: /config
+#    - type: disk_use_percent
+#      arg: /home
+#    - type: disk_use_percent
+#      arg: /config
     - type: memory_free
-    - type: network_in
-      arg: enp3s0
-    - type: network_out
-      arg: enp3s0
+#    - type: network_in
+#      arg: enp3s0
+#    - type: network_out
+#      arg: enp3s0
     - type: processor_use
 # cert
 - platform: cert_expiry

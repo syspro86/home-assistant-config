@@ -24,7 +24,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
+  # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret http_base_url
   ssl_certificate: !secret http_ssl_certificate
@@ -92,10 +92,10 @@ fan:
 
 wake_on_lan:
 
-media_player:
-  - platform: spotify
-    client_id: !secret spotify_client_id
-    client_secret: !secret spotify_client_secret
+#media_player:
+#  - platform: spotify
+#    client_id: !secret spotify_client_id
+#    client_secret: !secret spotify_client_secret
       
 telegram_bot:
   - platform: polling
@@ -112,3 +112,7 @@ notify:
     resource: !secret podcast_remove_url
     method: GET
 
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  api_key: !secret google_assistant_pi_key
+  expose_by_default: true

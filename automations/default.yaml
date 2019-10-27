@@ -10,88 +10,60 @@
       message: HA started
     service: notify.telegram_noti
 
-- id: noti22
-  alias: 22:00 noti
-  trigger:
-  - at: '22:00:00'
-    platform: time
-  condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: 'media_player.mymini'
-        state: 'paused'
-      - condition: state
-        entity_id: 'media_player.mymini'
-        state: 'off'
-  action:
-  - data:
-      entity_id: media_player.mymini
-      message: It's 10 pm
-    service: tts.google_say
-  - data:
-      entity_id: media_player.mymini
-      volume_level: 0.4
-    service: media_player.volume_set
-  - delay: '5'
-  - data:
-      entity_id: media_player.mymini
-      volume_level: 0.1
-    service: media_player.volume_set
-- id: noti23
-  alias: 23:00 noti
-  trigger:
-  - at: '23:00:00'
-    platform: time
-  condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: 'media_player.mymini'
-        state: 'paused'
-      - condition: state
-        entity_id: 'media_player.mymini'
-        state: 'off'
-  action:
-  - data:
-      entity_id: media_player.mymini
-      message: It's 11 pm
-    service: tts.google_say
-  - data:
-      entity_id: media_player.mymini
-      volume_level: 0.4
-    service: media_player.volume_set
-  - delay: '5'
-  - data:
-      entity_id: media_player.mymini
-      volume_level: 0.1
-    service: media_player.volume_set
-- id: noti00
-  alias: 00:00 noti
-  trigger:
-  - at: 00:00:00
-    platform: time
-  condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: 'media_player.mymini'
-        state: 'paused'
-      - condition: state
-        entity_id: 'media_player.mymini'
-        state: 'off'
-  action:
-  - data:
-      entity_id: media_player.mymini
-      message: It's midnight
-    service: tts.google_say
-  - data:
-      entity_id: media_player.mymini
-      volume_level: 0.4
-    service: media_player.volume_set
-  - delay: '5'
-  - data:
-      entity_id: media_player.mymini
-      volume_level: 0.1
-    service: media_player.volume_set
-    
+#- id: noti22
+#  alias: 22:00 noti
+#  trigger:
+#  - at: '22:00:00'
+#    platform: time
+#  condition:
+#    condition: or
+#    conditions:
+#      - condition: state
+#        entity_id: 'media_player.mymini'
+#        state: 'paused'
+#      - condition: state
+#        entity_id: 'media_player.mymini'
+#        state: 'off'
+#  action:
+#  - data:
+#      entity_id: media_player.mymini
+#      message: It's 10 pm
+#    service: tts.google_say
+#- id: noti23
+#  alias: 23:00 noti
+#  trigger:
+#  - at: '23:00:00'
+#    platform: time
+#  condition:
+#    condition: or
+#    conditions:
+#      - condition: state
+#        entity_id: 'media_player.mymini'
+#        state: 'paused'
+#      - condition: state
+#        entity_id: 'media_player.mymini'
+#        state: 'off'
+#  action:
+#  - data:
+#      entity_id: media_player.mymini
+#      message: It's 11 pm
+#    service: tts.google_say
+#- id: noti00
+#  alias: 00:00 noti
+#  trigger:
+#  - at: 00:00:00
+#    platform: time
+#  condition:
+#    condition: or
+#    conditions:
+#      - condition: state
+#        entity_id: 'media_player.mymini'
+#        state: 'paused'
+#      - condition: state
+#        entity_id: 'media_player.mymini'
+#        state: 'off'
+#  action:
+#  - data:
+#      entity_id: media_player.mymini
+#      message: It's midnight
+#    service: tts.google_say

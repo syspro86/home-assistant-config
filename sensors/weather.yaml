@@ -1,16 +1,16 @@
-- platform: yr
+#- platform: yr
 # weather
-- platform: yweather
-  name: yw_day0
-  monitored_conditions:
-    - weather
-  #  - temp_min
-  #  - temp_max
-- platform: yweather
-  forecast: 1
-  name: yw_day1
-  monitored_conditions:
-    - weather
+#- platform: yweather
+#  name: yw_day0
+#  monitored_conditions:
+#    - weather
+#  #  - temp_min
+#  #  - temp_max
+#- platform: yweather
+#  forecast: 1
+#  name: yw_day1
+#  monitored_conditions:
+#    - weather
 #    - temp_min
 #    - temp_max
 # - platform: yweather
@@ -45,7 +45,3 @@
       friendly_name: '공기청정기 필터 잔량'
       unit_of_measurement: '%'
       value_template: '{{ states.fan.xiaomi_miio_device.attributes.filter_life_remaining }}'
-
-      
-
-      
